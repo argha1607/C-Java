@@ -1,18 +1,19 @@
-#include<stdio.h>
-#include<math.h>
-int main()
-{
-int k=0, num, rem;
-printf("enter a number: ");
-scanf("%d", &num);
-int bin = 0;
-while (num>0)
-{
-rem = num%2;
-bin = bin +rem*pow(10, k);
-num = num/2;
-k++;
-}
-printf(" binary representation is %d", bin);
-return 0;
+#include <stdio.h>
+
+int main() {
+    int dNum, bNum = 0, base = 1;
+
+    printf("Enter a decimal number: ");
+    scanf("%d", &dNum);
+int rem;
+    while (dNum > 0) {
+         rem = dNum % 2;
+        bNum = bNum + rem * base;
+        dNum = dNum/ 2;
+        base = base *10;
+    }
+
+    printf("Binary representation: %d\n", bNum);
+
+    return 0;
 }

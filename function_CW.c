@@ -1,14 +1,14 @@
 #include<stdio.h>
 int func1(int i)
 {
-    int a=1;
+    int a;
     a=a+1;
     printf("%d\n", a);
     return 0;
 }
 int func2(int i)
 {
-    static int a=1;
+    static int a;
     a = a+1;
     printf("%d\n", a);
     return 0;
